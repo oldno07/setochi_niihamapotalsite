@@ -1,0 +1,327 @@
+/* ===== アイキャッチ（メインビジュアル） ===== */
+.company-eyecatch {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--mist);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-eyecatch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-eyecatch .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--mist);
+}
+
+.company-eyecatch-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 25, 0.7) 0%,
+    rgba(10, 20, 25, 0.15) 45%,
+    rgba(10, 20, 25, 0) 70%
+  );
+}
+
+.company-eyecatch-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 32px 28px;
+  color: #ffffff;
+}
+
+.company-eyecatch-text .company-tag {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.company-eyecatch-text h1 {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+
+.company-eyecatch-text .catch {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 8px;
+  max-width: 560px;
+}
+
+/* ===== サブギャラリー（小さめ4枚） ===== */
+.company-subgallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px 0 0;
+}
+
+.company-subgallery .shot {
+  aspect-ratio: 1 / 1;
+  background: var(--mist);
+  overflow: hidden;
+  position: relative;
+}
+
+.company-subgallery .shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-subgallery .shot .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 6px;
+}
+
+/* ===== アンカーナビ ===== */
+.company-anchor-nav {
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.company-anchor-nav .wrap {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 10px 28px;
+}
+
+.company-anchor-nav a {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.company-anchor-nav a:hover {
+  background: var(--mist);
+  color: var(--ink);
+}
+
+.company-tag {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--sea-deep);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* ===== セクション ===== */
+.company-section {
+  padding: 52px 0;
+}
+
+.company-section + .company-section {
+  border-top: 1px solid var(--line);
+}
+
+.company-section h2 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-section h2::before {
+  content: "";
+  width: 6px;
+  height: 22px;
+  background: var(--sea-deep);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.company-body p {
+  font-size: 15.5px;
+  color: var(--ink);
+  line-height: 1.95;
+  max-width: 640px;
+}
+
+/* ===== 基本情報：チップ並び ===== */
+.info-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.info-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--mist);
+  border-radius: 12px;
+}
+
+.info-chip .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.info-chip .label {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.info-chip .value {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* ===== 強み・特色：見出し型 ===== */
+.strength-feature {
+  background: linear-gradient(135deg, var(--mist) 0%, var(--paper) 100%);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 640px;
+}
+
+.strength-feature .strength-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sea-deep);
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.strength-feature .strength-headline {
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* ===== 実績バッジ ===== */
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.achievement-badge {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--sea-deep);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  padding: 10px 18px;
+  border-radius: 999px;
+}
+
+/* ===== 連絡先・CTA ===== */
+.company-contact {
+  background: var(--ink);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.company-contact .lead {
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.company-contact .sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
+}
+
+.company-contact .actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.company-contact .btn-outline {
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+}
+.company-contact .btn-outline:hover {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+/* ===== 戻る導線 ===== */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 28px 0 0;
+}
+
+@media (max-width: 760px) {
+  .company-eyecatch {
+    aspect-ratio: 4 / 5;
+  }
+  .company-subgallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .info-chip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .company-contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
