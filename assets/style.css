@@ -11,8 +11,8 @@
   --green: #4f7a4a;
   --green-deep: #3a5c38;
   --sand: #c9a86b;
-  --akagane: #3e1616;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -104,7 +104,7 @@ a {
 
 /* ===== フッター ===== */
 .site-footer {
-  background: var(--akagane);
+  background: var(--ink);
   color: #c9c9c5;
   padding: 64px 0 28px;
 }
@@ -152,6 +152,15 @@ a {
   padding-top: 22px;
   font-size: 11.5px;
   color: #6b6b66;
+}
+.footer-bottom p {
+  margin: 0;
+  line-height: 1.7;
+}
+.footer-bottom .footer-credit {
+  font-size: 11px;
+  color: #565650;
+  margin-top: 4px;
 }
 
 /* ===== ボタン ===== */
