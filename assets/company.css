@@ -151,22 +151,44 @@
   border-top: 1px solid var(--line);
 }
 
-.company-section h2 {
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.section-heading {
+  margin-bottom: 28px;
 }
 
-.company-section h2::before {
-  content: "";
-  width: 6px;
-  height: 22px;
+.narrator-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--mist);
+  border-radius: 999px;
+  padding: 6px 16px 6px 6px;
+  margin-bottom: 16px;
+}
+
+.narrator-badge .avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
   background: var(--sea-deep);
-  border-radius: 2px;
-  display: inline-block;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.narrator-badge .narrator-text {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.section-heading h2 {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.5;
 }
 
 .company-body p {
@@ -174,6 +196,10 @@
   color: var(--ink);
   line-height: 1.95;
   max-width: 640px;
+}
+
+.company-body p + p {
+  margin-top: 18px;
 }
 
 /* ===== 基本情報：チップ並び ===== */
@@ -201,8 +227,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
   flex-shrink: 0;
+  color: var(--sea-deep);
 }
 
 .info-chip .label {
@@ -226,14 +252,6 @@
   border-radius: 16px;
   padding: 32px;
   max-width: 640px;
-}
-
-.strength-feature .strength-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--sea-deep);
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
 }
 
 .strength-feature .strength-headline {
