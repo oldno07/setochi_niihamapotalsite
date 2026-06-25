@@ -284,7 +284,7 @@
 
 .section-heading .heading-num {
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 24px;
   font-weight: 700;
   color: #c4bca8;
   letter-spacing: 0.05em;
@@ -479,5 +479,94 @@
   .company-contact {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+/* company.css に追加・修正 */
+.company-body {
+  max-width: 720px; /* コンテナ自体に制限 */
+  margin: 0 auto; /* 中央寄せをより明確に */
+}
+
+.company-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 32px 0 24px;
+}
+
+.company-body p {
+  max-width: 100%; /* p自体は親の幅に従う */
+}
+.company-body figure {
+  margin: 40px 0 32px;
+  max-width: 100%;
+}
+
+.company-body figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+/* 強み・特色セクションも統一 */
+.strength-feature {
+  max-width: 720px;
+  margin: 0 auto;
+}
+/* ===== アイキャッチ（メインビジュアル） 強化版 ===== */
+.company-eyecatch {
+  aspect-ratio: 16 / 9;
+}
+
+.company-eyecatch-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 25, 0.78) 0%,
+    rgba(10, 20, 25, 0.55) 35%,
+    rgba(10, 20, 25, 0.18) 65%,
+    rgba(10, 20, 25, 0) 100%
+  );
+}
+
+.company-eyecatch-text {
+  padding: 36px 28px 52px; /* 下側に少し余裕を持たせる */
+}
+
+.company-eyecatch-text .company-tag {
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 12.5px;
+  padding: 6px 16px;
+  letter-spacing: 0.06em;
+}
+
+.company-eyecatch-text h1 {
+  font-size: clamp(29px, 5.2vw, 44px); /* 少年野球らしい迫力 */
+  line-height: 1.22;
+  margin-top: 14px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45); /* 視認性大幅UP */
+}
+
+.company-eyecatch-text .catch {
+  font-size: 16.5px;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+/* モバイル調整 */
+@media (max-width: 760px) {
+  .company-eyecatch-text {
+    padding: 28px 20px 40px;
+  }
+
+  .company-eyecatch-text h1 {
+    font-size: clamp(26px, 6.5vw, 36px);
+  }
+
+  .company-eyecatch-text .catch {
+    font-size: 15.5px;
   }
 }
