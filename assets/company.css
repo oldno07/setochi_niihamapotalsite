@@ -415,49 +415,55 @@
   background: #5c5c58;
 }
 
-/* ===== 営業時間リスト（飲食・医療など時間が複雑な業種向け） ===== */
+/* ===== 来店前に知っておきたいこと：左右2カラムの土台 ===== */
+.visit-info {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ===== 営業時間：曜日別コンパクトリスト ===== */
 .hours-list {
-  max-width: 480px;
   border-top: 1px solid var(--line);
 }
 
 .hours-row {
-  display: grid;
-  grid-template-columns: 96px 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: baseline;
-  gap: 16px;
-  padding: 14px 4px;
+  gap: 12px;
+  padding: 11px 2px;
   border-bottom: 1px solid var(--line);
+  font-size: 14px;
 }
 
 .hours-row .day {
-  font-size: 13.5px;
   font-weight: 700;
   color: var(--ink);
+  flex-shrink: 0;
 }
 
 .hours-row .time {
-  font-size: 14px;
   color: var(--ink-soft);
+  text-align: right;
 }
 
-.hours-row .time .note {
-  display: block;
-  font-size: 11.5px;
-  color: #9c9c97;
-  margin-top: 2px;
-}
-
-.hours-row .time .closed {
+.hours-row .time.is-closed {
   color: #8a4a36;
   font-weight: 700;
 }
 
+.hours-row.is-holiday {
+  border-top: 1px dashed var(--line);
+  margin-top: 2px;
+}
+
 .hours-row.is-today {
   background: var(--mist);
-  margin: 0 -14px;
-  padding: 14px 18px;
-  border-radius: 10px;
+  margin: 0 -10px;
+  padding: 11px 12px;
+  border-radius: 8px;
   border-bottom-color: transparent;
 }
 
@@ -471,6 +477,19 @@
   margin-left: 8px;
   letter-spacing: 0.05em;
   vertical-align: middle;
+}
+
+.hours-disclaimer {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .visit-info {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
 
 /* ===== こだわりメニュー：写真カード（飲食・小売など商品紹介が要る業種向け） ===== */
@@ -558,8 +577,12 @@
 }
 
 @media (max-width: 760px) {
-  .hours-row {
-    grid-template-columns: 76px 1fr;
+  .map-embed {
+    margin-left: -28px;
+    margin-right: -28px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 
