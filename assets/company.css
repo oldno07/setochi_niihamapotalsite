@@ -398,6 +398,186 @@
   border-radius: 999px;
 }
 
+/* ===== カテゴリタグ：業種別カラー（トップページのtag-*と統一） ===== */
+.company-intro-card .category-tag.cat-food {
+  background: #8a4a36;
+}
+.company-intro-card .category-tag.cat-medical {
+  background: #2e5c3a;
+}
+.company-intro-card .category-tag.cat-construction {
+  background: #2c5c76;
+}
+.company-intro-card .category-tag.cat-auto {
+  background: #8a6a2e;
+}
+.company-intro-card .category-tag.cat-general {
+  background: #5c5c58;
+}
+
+/* ===== 営業時間リスト（飲食・医療など時間が複雑な業種向け） ===== */
+.hours-list {
+  max-width: 480px;
+  border-top: 1px solid var(--line);
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hours-row .day {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.hours-row .time {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.hours-row .time .note {
+  display: block;
+  font-size: 11.5px;
+  color: #9c9c97;
+  margin-top: 2px;
+}
+
+.hours-row .time .closed {
+  color: #8a4a36;
+  font-weight: 700;
+}
+
+.hours-row.is-today {
+  background: var(--mist);
+  margin: 0 -14px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border-bottom-color: transparent;
+}
+
+.hours-row.is-today .day::after {
+  content: "TODAY";
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--sea-deep);
+  margin-left: 8px;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+/* ===== こだわりメニュー：写真カード（飲食・小売など商品紹介が要る業種向け） ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.menu-card .menu-photo {
+  aspect-ratio: 4 / 3;
+  background: var(--mist);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card .menu-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-card .menu-photo .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.menu-card .menu-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #ffffff;
+  background: #8a4a36;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.menu-card .menu-body {
+  padding: 16px 18px 18px;
+}
+
+.menu-card .menu-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.menu-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.menu-card .price {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sea-deep);
+  flex-shrink: 0;
+}
+
+.menu-card p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .hours-row {
+    grid-template-columns: 76px 1fr;
+  }
+}
+
+/* ===== マップ埋め込み ===== */
+.map-embed {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* ===== 連絡先・CTA ===== */
 .company-contact {
   background: var(--ink);
