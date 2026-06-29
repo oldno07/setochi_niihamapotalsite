@@ -415,7 +415,7 @@
   background: #5c5c58;
 }
 
-/* ===== 来店前に知っておきたいこと：左右2カラムの土台 ===== */
+/* ===== ご利用案内：左右2カラムの土台 ===== */
 .visit-info {
   display: grid;
   grid-template-columns: minmax(220px, 300px) 1fr;
@@ -423,18 +423,25 @@
   align-items: start;
 }
 
-/* ===== 営業時間：曜日別コンパクトリスト ===== */
+/* ===== 営業時間：曜日別カードリスト（info-chipと同じ見た目で揃える） ===== */
 .hours-list {
-  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--mist);
+  border-radius: 12px;
 }
 
 .hours-row {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
-  padding: 11px 2px;
-  border-bottom: 1px solid var(--line);
+  padding: 4px 18px;
+  background: var(--mist);
+  border-radius: 12px;
   font-size: 14px;
 }
 
@@ -455,28 +462,7 @@
 }
 
 .hours-row.is-holiday {
-  border-top: 1px dashed var(--line);
-  margin-top: 2px;
-}
-
-.hours-row.is-today {
-  background: var(--mist);
-  margin: 0 -10px;
-  padding: 11px 12px;
-  border-radius: 8px;
-  border-bottom-color: transparent;
-}
-
-.hours-row.is-today .day::after {
-  content: "TODAY";
-  display: inline-block;
-  font-family: "Inter", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  color: var(--sea-deep);
-  margin-left: 8px;
-  letter-spacing: 0.05em;
-  vertical-align: middle;
+  margin-top: 4px;
 }
 
 .hours-disclaimer {
@@ -662,19 +648,20 @@
     font-size: 15px;
   }
   .card-action-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
   .action-unit {
-    flex: 1 1 calc(100%);
     padding: 12px 10px;
-    justify-content: center;
-  }
-  .action-unit:first-child {
-    flex: 1 1 100%;
     justify-content: flex-start;
   }
+  .action-unit.primary {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
   .company-subgallery {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .info-chip-grid {
     grid-template-columns: 1fr;
@@ -772,4 +759,82 @@
   .company-eyecatch-text .catch {
     font-size: 15.5px;
   }
+}
+/* ===== 予約フォーム ===== */
+.reservation-form {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.form-group .required {
+  color: #8a4a36;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--sea-deep);
+  box-shadow: 0 0 0 3px rgba(44, 92, 118, 0.1);
+}
+
+.form-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* モバイル調整 */
+@media (max-width: 760px) {
+  .reservation-form {
+    padding: 24px 20px;
+  }
+}
+/* hours-list 内のタイトル */
+.hours-list .hours-header {
+  display: flex;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  padding: 8px 18px 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+  justify-content: center;
 }
