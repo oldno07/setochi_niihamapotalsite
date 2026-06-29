@@ -616,6 +616,7 @@
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .company-contact .btn-outline {
@@ -676,7 +677,6 @@
 .company-body {
   max-width: 720px; /* コンテナ自体に制限 */
   margin: 0 auto; /* 中央寄せをより明確に */
-  padding-top: 32px;
 }
 
 .company-body img {
