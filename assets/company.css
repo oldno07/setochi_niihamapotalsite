@@ -200,6 +200,7 @@
   background: var(--mist);
   overflow: hidden;
   position: relative;
+  border-radius: 5px;
 }
 
 .company-subgallery .shot img {
@@ -562,16 +563,6 @@
   line-height: 1.7;
 }
 
-@media (max-width: 760px) {
-  .map-embed {
-    margin-left: -28px;
-    margin-right: -28px;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-  }
-}
-
 /* ===== マップ埋め込み ===== */
 .map-embed {
   aspect-ratio: 16 / 9;
@@ -585,6 +576,15 @@
   height: 100%;
   border: 0;
   display: block;
+}
+@media (max-width: 760px) {
+  .map-embed {
+    margin-left: -28px;
+    margin-right: -28px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
 }
 
 /* ===== 連絡先・CTA ===== */
@@ -615,6 +615,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .company-contact .btn-outline {
@@ -675,6 +676,7 @@
 .company-body {
   max-width: 720px; /* コンテナ自体に制限 */
   margin: 0 auto; /* 中央寄せをより明確に */
+  padding-top: 32px;
 }
 
 .company-body img {
@@ -837,4 +839,129 @@
   border-bottom: 1px solid var(--line);
   margin-bottom: 8px;
   justify-content: center;
+}
+/* company-contact 内のボタン視認性向上 */
+.company-contact .btn-outline {
+  border: 1.5px solid var(--sea-deep);
+  color: var(--sea-deep);
+  background: transparent;
+}
+
+.company-contact .btn-outline:hover {
+  background: var(--sea-deep);
+  color: #ffffff;
+}
+/* お問い合わせセクションのプライマリボタン調整 */
+.company-contact .btn-primary {
+  background: var(--sea-deep);
+  color: #ffffff;
+  border: none;
+}
+
+.company-contact .btn-primary:hover {
+  background: #1e4a5f;
+  transform: translateY(-2px);
+}
+
+/* 基本情報内の注釈ボックス */
+.info-note {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--mist);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* 公式リンクエリア */
+.official-links {
+  margin-top: 40px;
+  text-align: center;
+  background: transparent;
+}
+
+.official-links .official-title {
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.official-links .links {
+  display: inline-flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.official-links a {
+  color: var(--sea-deep);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.official-links a:hover {
+  color: var(--sea);
+}
+/* 公式リンクエリア */
+.official-links {
+  margin-top: 40px;
+  text-align: center;
+  background: transparent;
+}
+
+.official-links .official-title {
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.official-links .links {
+  display: inline-flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.official-links a {
+  color: var(--sea-deep);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.official-links a:hover {
+  color: var(--sea);
+  transform: translateY(-2px);
+}
+/* アクセス住所ボックス */
+.access-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--mist);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.access-address .icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.access-address p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.6;
 }
