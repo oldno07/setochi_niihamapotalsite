@@ -1,3 +1,16 @@
+/* ===== 基本変数・共通 ===== */
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #565656;
+  --paper: #ffffff;
+  --mist: #f5f5f3;
+  --line: #e5e3dd;
+  --sea: #3e7e9e;
+  --sea-deep: #2c5c76;
+  --green: #4f7a4a;
+  --green-deep: #3a5c38;
+  --sand: #c9a86b;
+}
 /* ===== アイキャッチ（メインビジュアル） ===== */
 .company-eyecatch {
   width: 100%;
@@ -676,7 +689,7 @@
 /* company.css に追加・修正 */
 .company-body {
   max-width: 720px; /* コンテナ自体に制限 */
-  margin: 0 auto; /* 中央寄せをより明確に */
+  margin: 2em auto 0; /* 中央寄せをより明確に */
 }
 
 .company-body img {
@@ -964,4 +977,116 @@
   margin: 0;
   font-size: 15.5px;
   line-height: 1.6;
+}
+/* アクセス住所用ピンアイコン */
+.pin-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--sea-deep);
+}
+/* お問い合わせセクション（明るい背景版） */
+.company-contact-light {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.company-contact-light .lead {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.company-contact-light .sub {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.company-contact-light .actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* レスポンシブ最適化（モバイル優先） */
+@media (max-width: 760px) {
+  .company-eyecatch {
+    aspect-ratio: 4 / 5;
+  }
+
+  .company-intro-card .card-action-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .company-subgallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-chip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-info {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .company-contact {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .official-links .links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .access-address {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* タブレット対応 */
+@media (min-width: 761px) and (max-width: 1024px) {
+  .company-subgallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.access-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--mist);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.info-note {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--mist);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
 }
