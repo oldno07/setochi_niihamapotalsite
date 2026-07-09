@@ -1,3 +1,16 @@
+/* ===== 基本変数・共通 ===== */
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #565656;
+  --paper: #ffffff;
+  --mist: #f5f5f3;
+  --line: #e5e3dd;
+  --sea: #3e7e9e;
+  --sea-deep: #2c5c76;
+  --green: #4f7a4a;
+  --green-deep: #3a5c38;
+  --sand: #c9a86b;
+}
 /* ===== アイキャッチ（メインビジュアル） ===== */
 .company-eyecatch {
   width: 100%;
@@ -200,6 +213,7 @@
   background: var(--mist);
   overflow: hidden;
   position: relative;
+  border-radius: 5px;
 }
 
 .company-subgallery .shot img {
@@ -284,7 +298,7 @@
 
 .section-heading .heading-num {
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 24px;
   font-weight: 700;
   color: #c4bca8;
   letter-spacing: 0.05em;
@@ -325,7 +339,7 @@
 /* ===== 基本情報：チップ並び ===== */
 .info-chip-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 14px;
 }
 
@@ -398,6 +412,194 @@
   border-radius: 999px;
 }
 
+/* ===== カテゴリタグ：業種別カラー（トップページのtag-*と統一） ===== */
+.company-intro-card .category-tag.cat-food {
+  background: #8a4a36;
+}
+.company-intro-card .category-tag.cat-medical {
+  background: #2e5c3a;
+}
+.company-intro-card .category-tag.cat-construction {
+  background: #2c5c76;
+}
+.company-intro-card .category-tag.cat-auto {
+  background: #8a6a2e;
+}
+.company-intro-card .category-tag.cat-general {
+  background: #5c5c58;
+}
+
+/* ===== ご利用案内：左右2カラムの土台 ===== */
+.visit-info {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ===== 営業時間：曜日別カードリスト（info-chipと同じ見た目で揃える） ===== */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--mist);
+  border-radius: 12px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 18px;
+  background: var(--mist);
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.hours-row .day {
+  font-weight: 700;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.hours-row .time {
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.hours-row .time.is-closed {
+  color: #8a4a36;
+  font-weight: 700;
+}
+
+.hours-row.is-holiday {
+  margin-top: 4px;
+}
+
+.hours-disclaimer {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .visit-info {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ===== こだわりメニュー：写真カード（飲食・小売など商品紹介が要る業種向け） ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.menu-card .menu-photo {
+  aspect-ratio: 4 / 3;
+  background: var(--mist);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card .menu-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-card .menu-photo .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.menu-card .menu-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #ffffff;
+  background: #8a4a36;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.menu-card .menu-body {
+  padding: 16px 18px 18px;
+}
+
+.menu-card .menu-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.menu-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.menu-card .price {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sea-deep);
+  flex-shrink: 0;
+}
+
+.menu-card p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+
+/* ===== マップ埋め込み ===== */
+.map-embed {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+@media (max-width: 760px) {
+  .map-embed {
+    margin-left: -28px;
+    margin-right: -28px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
 /* ===== 連絡先・CTA ===== */
 .company-contact {
   background: var(--ink);
@@ -426,6 +628,8 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .company-contact .btn-outline {
@@ -459,19 +663,20 @@
     font-size: 15px;
   }
   .card-action-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
   .action-unit {
-    flex: 1 1 calc(50% - 4px);
     padding: 12px 10px;
-    justify-content: center;
-  }
-  .action-unit:first-child {
-    flex: 1 1 100%;
     justify-content: flex-start;
   }
+  .action-unit.primary {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
   .company-subgallery {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .info-chip-grid {
     grid-template-columns: 1fr;
@@ -480,4 +685,408 @@
     flex-direction: column;
     align-items: flex-start;
   }
+}
+/* company.css に追加・修正 */
+.company-body {
+  max-width: 720px; /* コンテナ自体に制限 */
+  margin: 2em auto 0; /* 中央寄せをより明確に */
+}
+
+.company-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 32px 0 24px;
+}
+
+.company-body p {
+  max-width: 100%; /* p自体は親の幅に従う */
+}
+.company-body figure {
+  margin: 40px 0 32px;
+  max-width: 100%;
+}
+
+.company-body figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+/* 強み・特色セクションも統一 */
+.strength-feature {
+  max-width: 720px;
+  margin: 0 auto;
+}
+/* ===== アイキャッチ（メインビジュアル） 強化版 ===== */
+.company-eyecatch {
+  aspect-ratio: 16 / 9;
+}
+
+.company-eyecatch-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 25, 0.78) 0%,
+    rgba(10, 20, 25, 0.55) 35%,
+    rgba(10, 20, 25, 0.18) 65%,
+    rgba(10, 20, 25, 0) 100%
+  );
+}
+
+.company-eyecatch-text {
+  padding: 36px 28px 52px; /* 下側に少し余裕を持たせる */
+}
+
+.company-eyecatch-text .company-tag {
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 12.5px;
+  padding: 6px 16px;
+  letter-spacing: 0.06em;
+}
+
+.company-eyecatch-text h1 {
+  font-size: clamp(29px, 5.2vw, 44px); /* 少年野球らしい迫力 */
+  line-height: 1.22;
+  margin-top: 14px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45); /* 視認性大幅UP */
+}
+
+.company-eyecatch-text .catch {
+  font-size: 16.5px;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+/* モバイル調整 */
+@media (max-width: 760px) {
+  .company-eyecatch-text {
+    padding: 28px 20px 40px;
+  }
+
+  .company-eyecatch-text h1 {
+    font-size: clamp(26px, 6.5vw, 36px);
+  }
+
+  .company-eyecatch-text .catch {
+    font-size: 15.5px;
+  }
+}
+/* ===== 予約フォーム ===== */
+.reservation-form {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.form-group .required {
+  color: #8a4a36;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--sea-deep);
+  box-shadow: 0 0 0 3px rgba(44, 92, 118, 0.1);
+}
+
+.form-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* モバイル調整 */
+@media (max-width: 760px) {
+  .reservation-form {
+    padding: 24px 20px;
+  }
+}
+/* hours-list 内のタイトル */
+.hours-list .hours-header {
+  display: flex;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  padding: 8px 18px 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+  justify-content: center;
+}
+/* company-contact 内のボタン視認性向上 */
+.company-contact .btn-outline {
+  border: 1.5px solid var(--sea-deep);
+  color: var(--sea-deep);
+  background: transparent;
+}
+
+.company-contact .btn-outline:hover {
+  background: var(--sea-deep);
+  color: #ffffff;
+}
+/* お問い合わせセクションのプライマリボタン調整 */
+.company-contact .btn-primary {
+  background: var(--sea-deep);
+  color: #ffffff;
+  border: none;
+}
+
+.company-contact .btn-primary:hover {
+  background: #1e4a5f;
+  transform: translateY(-2px);
+}
+
+/* 基本情報内の注釈ボックス */
+.info-note {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--mist);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* 公式リンクエリア */
+.official-links {
+  margin-top: 40px;
+  text-align: center;
+  background: transparent;
+}
+
+.official-links .official-title {
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.official-links .links {
+  display: inline-flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.official-links a {
+  color: var(--sea-deep);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.official-links a:hover {
+  color: var(--sea);
+}
+/* 公式リンクエリア */
+.official-links {
+  margin-top: 40px;
+  text-align: center;
+  background: transparent;
+}
+
+.official-links .official-title {
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.official-links .links {
+  display: inline-flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.official-links a {
+  color: var(--sea-deep);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.official-links a:hover {
+  color: var(--sea);
+  transform: translateY(-2px);
+}
+/* アクセス住所ボックス */
+.access-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--mist);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.access-address .icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.access-address p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+/* アクセス住所用ピンアイコン */
+.pin-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--sea-deep);
+}
+/* お問い合わせセクション（明るい背景版） */
+.company-contact-light {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.company-contact-light .lead {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.company-contact-light .sub {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.company-contact-light .actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* レスポンシブ最適化（モバイル優先） */
+@media (max-width: 760px) {
+  .company-eyecatch {
+    aspect-ratio: 4 / 5;
+  }
+
+  .company-intro-card .card-action-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .company-subgallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-chip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-info {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .company-contact {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .official-links .links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .access-address {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* タブレット対応 */
+@media (min-width: 761px) and (max-width: 1024px) {
+  .company-subgallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.access-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--mist);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.info-note {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--mist);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
 }
