@@ -50,7 +50,6 @@
       </div>
     </div>
 
-    <!-- イントロダクションカード：一目でわかるスペック情報 -->
     <div class="company-intro-card">
       <div class="wrap">
         <div class="card-inner">
@@ -64,7 +63,6 @@
           </p>
 
           <div class="card-action-bar">
-            <!-- 営業時間 -->
             <div class="action-unit">
               <div class="action-icon">
                 <svg
@@ -83,12 +81,31 @@
               </div>
               <div class="action-content">
                 <span class="label">営業時間</span>
-                <span class="value">9:30〜18:30（水曜定休）</span>
+                <span class="value">9:30〜18:30</span>
               </div>
             </div>
-
-            <!-- 地図を見る -->
-            <a href="#visit" class="action-unit link-style">
+            <div class="action-unit">
+              <div class="action-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                  <path d="M16 3v4M8 3v4M3 10h18" />
+                </svg>
+              </div>
+              <div class="action-content">
+                <span class="label">定休日</span>
+                <span class="value">水曜日</span>
+              </div>
+            </div>
+            <a href="#access" class="action-unit link-style">
               <div class="action-icon">
                 <svg
                   width="16"
@@ -105,11 +122,9 @@
                 </svg>
               </div>
               <div class="action-content">
-                <span class="value">地図・アクセスを見る</span>
+                <span class="value">地図で見る</span>
               </div>
             </a>
-
-            <!-- 電話 -->
             <a href="tel:0897-00-0000" class="action-unit link-style primary">
               <div class="action-icon">
                 <svg
@@ -128,7 +143,7 @@
                 </svg>
               </div>
               <div class="action-content">
-                <span class="value">お店に電話する</span>
+                <span class="value">電話する</span>
               </div>
             </a>
           </div>
@@ -191,7 +206,7 @@
         <a href="#info">基本情報</a>
         <a href="#products">取り扱い商品</a>
         <a href="#strength">強み・特色</a>
-        <a href="#visit">ご利用案内</a>
+        <a href="#access">アクセス</a>
         <a href="#contact">お問い合わせ</a>
       </div>
     </nav>
@@ -201,17 +216,14 @@
       <section class="company-section" id="about">
         <div class="section-heading">
           <span class="heading-num">01</span>
-          <div class="heading-main">
-            <h2>紹介</h2>
-          </div>
+          <h2>紹介</h2>
         </div>
 
         <div class="company-body">
           <figure>
             <img
               src="../../images/companies/retail-sample/photo-3.jpg"
-              alt="店内の様子"
-              onerror="this.parentElement.style.display = 'none'"
+              alt="浜口商店の店内"
             />
           </figure>
           <p>
@@ -236,106 +248,126 @@
       <section class="company-section" id="info">
         <div class="section-heading">
           <span class="heading-num">02</span>
-          <div class="heading-main">
-            <h2>基本情報</h2>
-          </div>
+          <h2>基本情報</h2>
         </div>
-        <div class="info-chip-grid">
-          <div class="info-chip">
-            <div class="icon">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="7" width="18" height="13" rx="1.5" />
-                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-              </svg>
+
+        <div class="visit-info">
+          <div>
+            <div class="hours-list">
+              <div class="hours-header">営業時間</div>
+              <div class="hours-row">
+                <div class="day">月・火・木・金・土</div>
+                <div class="time">9:30〜18:30</div>
+              </div>
+              <div class="hours-row">
+                <div class="day">日</div>
+                <div class="time">9:30〜17:00</div>
+              </div>
+              <div class="hours-row is-holiday">
+                <div class="day">水</div>
+                <div class="time is-closed">定休日</div>
+              </div>
             </div>
-            <div>
-              <div class="label">種別</div>
-              <div class="value">日用品・雑貨店</div>
-            </div>
-          </div>
-          <div class="info-chip">
-            <div class="icon">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M5 17h14l1.5-5.5a2 2 0 0 0-1.9-2.5H6.4a2 2 0 0 0-1.9 1.4L3 17"
-                />
-                <circle cx="7.5" cy="17.5" r="1.8" />
-                <circle cx="16.5" cy="17.5" r="1.8" />
-              </svg>
-            </div>
-            <div>
-              <div class="label">駐車場</div>
-              <div class="value">店舗前に3台あり</div>
-            </div>
-          </div>
-          <div class="info-chip">
-            <div class="icon">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M20 7h-3V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a1 1 0 0 0-1-1z"
-                />
-                <path d="M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" />
-              </svg>
-            </div>
-            <div>
-              <div class="label">お取り寄せ</div>
-              <div class="value">店頭にない商品も相談可</div>
-            </div>
-          </div>
-          <div class="info-chip">
-            <div class="icon">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M20 12v9H4v-9" />
-                <path d="M22 7H2v5h20V7Z" />
-                <path d="M12 22V7" />
-                <path d="M12 7c0-2.5-2-5-4-5s-2 3 0 5" />
-                <path d="M12 7c0-2.5 2-5 4-5s2 3 0 5" />
-              </svg>
-            </div>
-            <div>
-              <div class="label">ギフト包装</div>
-              <div class="value">対応可（要相談）</div>
-            </div>
+            <p class="hours-disclaimer">
+              ※ 年末年始・お盆等は営業時間が変更になる場合があります。
+            </p>
           </div>
 
-          <div class="info-note">
-            ※ 営業日・営業時間・価格の表示は、掲載開始時点のものです。
+          <div class="info-chip-grid">
+            <div class="info-chip">
+              <div class="icon">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="7" width="18" height="13" rx="1.5" />
+                  <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                </svg>
+              </div>
+              <div>
+                <div class="label">種別</div>
+                <div class="value">日用品・雑貨店</div>
+              </div>
+            </div>
+            <div class="info-chip">
+              <div class="icon">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M5 17h14l1.5-5.5a2 2 0 0 0-1.9-2.5H6.4a2 2 0 0 0-1.9 1.4L3 17"
+                  />
+                  <circle cx="7.5" cy="17.5" r="1.8" />
+                  <circle cx="16.5" cy="17.5" r="1.8" />
+                </svg>
+              </div>
+              <div>
+                <div class="label">駐車場</div>
+                <div class="value">店舗前に3台あり</div>
+              </div>
+            </div>
+            <div class="info-chip">
+              <div class="icon">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="6" width="20" height="13" rx="2" />
+                  <path d="M2 10h20" />
+                </svg>
+              </div>
+              <div>
+                <div class="label">お支払い</div>
+                <div class="value">現金・各種クレジットカード</div>
+              </div>
+            </div>
+            <div class="info-chip">
+              <div class="icon">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 12v9H4v-9" />
+                  <path d="M22 7H2v5h20V7Z" />
+                  <path d="M12 22V7" />
+                  <path d="M12 7c0-2.5-2-5-4-5s-2 3 0 5" />
+                  <path d="M12 7c0-2.5 2-5 4-5s2 3 0 5" />
+                </svg>
+              </div>
+              <div>
+                <div class="label">ギフト包装</div>
+                <div class="value">対応可（要相談）</div>
+              </div>
+            </div>
+
+            <div class="info-note">
+              ※ 営業日・営業時間・価格の表示は、掲載開始時点のものです。
+            </div>
           </div>
         </div>
       </section>
@@ -344,13 +376,12 @@
       <section class="company-section" id="products">
         <div class="section-heading">
           <span class="heading-num">03</span>
-          <div class="heading-main">
-            <h2>取り扱い商品</h2>
-          </div>
+          <h2>取り扱い商品</h2>
         </div>
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-photo">
+              <span class="menu-badge">台所用品</span>
               <img
                 src="../../images/companies/retail-sample/product-1.jpg"
                 alt="鍋・調理器具"
@@ -360,7 +391,6 @@
                 "
               />
               <div class="placeholder" style="display: none">product-1.jpg</div>
-              <span class="menu-badge">台所用品</span>
             </div>
             <div class="menu-body">
               <div class="menu-name-row">
@@ -373,6 +403,7 @@
 
           <div class="menu-card">
             <div class="menu-photo">
+              <span class="menu-badge">掃除・洗濯</span>
               <img
                 src="../../images/companies/retail-sample/product-2.jpg"
                 alt="ほうき・洗剤・小物"
@@ -382,7 +413,6 @@
                 "
               />
               <div class="placeholder" style="display: none">product-2.jpg</div>
-              <span class="menu-badge">掃除・洗濯</span>
             </div>
             <div class="menu-body">
               <div class="menu-name-row">
@@ -395,6 +425,7 @@
 
           <div class="menu-card">
             <div class="menu-photo">
+              <span class="menu-badge">季節の道具</span>
               <img
                 src="../../images/companies/retail-sample/product-3.jpg"
                 alt="年中行事・季節用品"
@@ -404,7 +435,6 @@
                 "
               />
               <div class="placeholder" style="display: none">product-3.jpg</div>
-              <span class="menu-badge">季節の道具</span>
             </div>
             <div class="menu-body">
               <div class="menu-name-row">
@@ -417,6 +447,7 @@
 
           <div class="menu-card">
             <div class="menu-photo">
+              <span class="menu-badge">ギフト</span>
               <img
                 src="../../images/companies/retail-sample/product-4.jpg"
                 alt="贈り物・包装対応"
@@ -426,7 +457,6 @@
                 "
               />
               <div class="placeholder" style="display: none">product-4.jpg</div>
-              <span class="menu-badge">ギフト</span>
             </div>
             <div class="menu-body">
               <div class="menu-name-row">
@@ -443,9 +473,7 @@
       <section class="company-section" id="strength">
         <div class="section-heading">
           <span class="heading-num">04</span>
-          <div class="heading-main">
-            <h2>強み・特色</h2>
-          </div>
+          <h2>強み・特色</h2>
         </div>
         <div class="strength-feature">
           <div class="strength-headline">
@@ -454,62 +482,38 @@
         </div>
       </section>
 
-      <!-- 05 ご利用案内（営業時間・アクセス） -->
-      <section class="company-section" id="visit">
+      <!-- 05 アクセス -->
+      <section class="company-section" id="access">
         <div class="section-heading">
           <span class="heading-num">05</span>
-          <div class="heading-main">
-            <h2>ご利用案内</h2>
-          </div>
+          <h2>アクセス</h2>
         </div>
-        <div class="visit-info">
-          <div>
-            <div class="access-address">
-              <svg
-                class="pin-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"
-                />
-                <circle cx="12" cy="9.5" r="2.3" />
-              </svg>
-              <p>
-                愛媛県新居浜市田の上1-2-3<br />店舗前に3台分の駐車スペースあり
-              </p>
-            </div>
 
-            <div class="hours-list">
-              <div class="hours-header">営業時間</div>
-              <div class="hours-row">
-                <span class="day">月・火・木・金・土</span>
-                <span class="time">9:30〜18:30</span>
-              </div>
-              <div class="hours-row">
-                <span class="day">日曜日</span>
-                <span class="time">9:30〜17:00</span>
-              </div>
-              <div class="hours-row is-holiday">
-                <span class="day">水曜日</span>
-                <span class="time is-closed">定休日</span>
-              </div>
-              <div class="hours-disclaimer">
-                ※ 年末年始・お盆等は営業時間が変更になる場合があります。
-              </div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%96%B0%E5%B1%85%E6%B5%9C%E5%B8%82%E7%94%B0%E3%81%AE%E4%B8%8A1-2-3%20%E6%B5%9C%E5%8F%A3%E5%95%86%E5%BA%97&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="浜口商店の地図"
+          ></iframe>
+        </div>
+        <div class="company-body">
+          <div class="access-address">
+            <svg
+              class="pin-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div>
+              <p>愛媛県新居浜市田の上1-2-3</p>
             </div>
-          </div>
-
-          <div class="map-embed">
-            <iframe
-              src="https://www.google.com/maps?q=%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%96%B0%E5%B1%85%E6%B5%9C%E5%B8%82%E7%94%B0%E3%81%AE%E4%B8%8A1-2-3%20%E6%B5%9C%E5%8F%A3%E5%95%86%E5%BA%97&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
         </div>
       </section>
@@ -518,9 +522,7 @@
       <section class="company-section" id="contact">
         <div class="section-heading">
           <span class="heading-num">06</span>
-          <div class="heading-main">
-            <h2>お問い合わせ</h2>
-          </div>
+          <h2>お問い合わせ</h2>
         </div>
         <div class="company-contact">
           <div>
@@ -531,6 +533,54 @@
             <a href="tel:0897-00-0000" class="btn btn-primary"
               >電話で問い合わせる</a
             >
+          </div>
+        </div>
+
+        <!-- 公式リンク（お問い合わせの下） -->
+        <div class="official-links">
+          <p class="official-title">公式情報</p>
+          <div class="links">
+            <a
+              href="https://www.hamaguchi-shoten.example.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              公式ホームページ
+            </a>
+            <a
+              href="https://www.instagram.com/hamaguchi_shoten/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              Instagram
+            </a>
           </div>
         </div>
       </section>
