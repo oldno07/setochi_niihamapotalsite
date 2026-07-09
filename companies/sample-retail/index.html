@@ -12,21 +12,11 @@
     <link rel="stylesheet" href="../../assets/company.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap header-inner">
-        <a href="../../index.html" class="brand">
-          <span class="brand-text"
-            >ええぞな新居浜<small>にいはまの、いい店みつけた!</small></span
-          >
-        </a>
-        <nav class="nav-links">
-          <a href="../index.html">企業一覧</a>
-          <a href="../../categories.html">業種で探す</a>
-          <a href="../../news.html">新着情報</a>
-          <a href="../../about.html">このサイトについて</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header" id="site-header"></header>
+    <script>
+      window.SITE_BASE = "../../";
+    </script>
+    <script src="../../assets/header.js"></script>
 
     <div class="company-eyecatch">
       <img
@@ -588,29 +578,14 @@
       <a href="../index.html" class="back-link">← 企業一覧にもどる</a>
     </main>
 
-    <footer class="site-footer" style="margin-top: 56px">
-      <div class="wrap footer-top">
-        <div>
-          <div class="footer-brand">ええぞな新居浜</div>
-          <p class="footer-tag">
-            にいはまのいい店みつけた!
-            今日のごはんから、暮らしの相談まで。新居浜のお店・会社を見つけられます。
-          </p>
-        </div>
-        <div class="footer-cols">
-          <div class="footer-col">
-            <h4>サイト内のページ</h4>
-            <a href="../index.html">企業一覧</a>
-            <a href="../../categories.html">業種で探す</a>
-            <a href="../../news.html">新着情報</a>
-            <a href="../../about.html">このサイトについて</a>
-          </div>
-        </div>
-      </div>
-      <div class="wrap footer-bottom">
-        <p>&copy; 2026 ええぞな新居浜</p>
-        <p class="footer-credit">写真提供：(一社)新居浜市観光物産協会</p>
-      </div>
-    </footer>
+    <footer
+      class="site-footer"
+      id="site-footer"
+      style="margin-top: 56px"
+    ></footer>
+    <script>
+      window.SITE_BASE = "../../";
+    </script>
+    <script src="../../assets/footer.js"></script>
   </body>
 </html>

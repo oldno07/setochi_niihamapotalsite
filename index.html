@@ -12,21 +12,11 @@
     <link rel="stylesheet" href="assets/home.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap header-inner">
-        <a href="index.html" class="brand">
-          <span class="brand-text"
-            >ええぞな新居浜<small>にいはまの、いい店みつけた!</small></span
-          >
-        </a>
-        <nav class="nav-links">
-          <a href="companies/index.html">企業一覧</a>
-          <a href="categories.html">業種で探す</a>
-          <a href="news.html">新着情報</a>
-          <a href="about.html">このサイトについて</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header" id="site-header"></header>
+    <script>
+      window.SITE_BASE = "";
+    </script>
+    <script src="assets/header.js"></script>
 
     <div class="hero">
       <div class="hero-image">
@@ -73,7 +63,7 @@
               <p>野球を楽しみ、好きになる。文武両道で成長するチーム。</p>
             </div>
           </a>
-          <a href="companies/a/index.html" class="marquee-card">
+          <a href="companies/yakiniku-furaibo/index.html" class="marquee-card">
             <div class="marquee-thumb">
               <img src="images/marquee-1.jpg" alt="焼肉 風来坊" />
             </div>
@@ -81,6 +71,19 @@
               <span class="marquee-tag">飲食</span>
               <h4>焼肉 風来坊</h4>
               <p>新居浜で30年、炭火一筋。</p>
+            </div>
+          </a>
+          <a href="companies/sample-retail/index.html" class="marquee-card">
+            <div class="marquee-thumb">
+              <img
+                src="images/companies/retail-sample/photo-1.jpg"
+                alt="浜口商店"
+              />
+            </div>
+            <div class="marquee-body">
+              <span class="marquee-tag">小売</span>
+              <h4>浜口商店</h4>
+              <p>三代続く、田の上の日用品店。</p>
             </div>
           </a>
           <a href="companies/b/index.html" class="marquee-card">
@@ -146,6 +149,19 @@
               <span class="marquee-tag">飲食</span>
               <h4>焼肉 風来坊</h4>
               <p>新居浜で30年、炭火一筋。</p>
+            </div>
+          </a>
+          <a href="companies/retail-sample/index.html" class="marquee-card">
+            <div class="marquee-thumb">
+              <img
+                src="images/companies/retail-sample/photo-1.jpg"
+                alt="浜口商店"
+              />
+            </div>
+            <div class="marquee-body">
+              <span class="marquee-tag">小売</span>
+              <h4>浜口商店</h4>
+              <p>三代続く、田の上の日用品店。</p>
             </div>
           </a>
           <a href="companies/b/index.html" class="marquee-card">
@@ -439,7 +455,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="news">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">新着のお店</span>
@@ -500,30 +516,11 @@
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="wrap footer-top">
-        <div>
-          <div class="footer-brand">ええぞな新居浜</div>
-          <p class="footer-tag">
-            にいはまのいい店みつけた!
-            今日のごはんから、暮らしの相談まで。新居浜のお店・会社を見つけられます。
-          </p>
-        </div>
-        <div class="footer-cols">
-          <div class="footer-col">
-            <h4>サイト内のページ</h4>
-            <a href="companies/index.html">企業一覧</a>
-            <a href="categories.html">業種で探す</a>
-            <a href="news.html">新着情報</a>
-            <a href="about.html">このサイトについて</a>
-          </div>
-        </div>
-      </div>
-      <div class="wrap footer-bottom">
-        <p>&copy; 2026 ええぞな新居浜</p>
-        <p class="footer-credit">写真提供：(一社)新居浜市観光物産協会</p>
-      </div>
-    </footer>
+    <footer class="site-footer" id="site-footer"></footer>
+    <script>
+      window.SITE_BASE = "";
+    </script>
+    <script src="assets/footer.js"></script>
 
     <script>
       (function () {
