@@ -122,6 +122,9 @@
   letter-spacing: -0.02em;
   max-width: 720px;
 }
+.company-intro-card .category-tag.cat-retail {
+  background: #6b4a63;
+}
 
 /* ===== アクションバー（スペック一覧） ===== */
 .card-action-bar {
