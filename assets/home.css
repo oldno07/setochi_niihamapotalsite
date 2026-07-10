@@ -354,6 +354,11 @@
   border: 1px solid var(--line);
 }
 
+/* 3枚だけ並べたい場合のバリアント（about.html「使い方」など） */
+.index-grid.is-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .index-card {
   background: var(--paper);
   padding: 32px 18px;
@@ -533,6 +538,9 @@
   .index-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .index-grid.is-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .ledger-head {
     display: none;
   }
@@ -542,5 +550,11 @@
   }
   .cta-section {
     padding: 40px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .index-grid.is-3col {
+    grid-template-columns: 1fr;
   }
 }
