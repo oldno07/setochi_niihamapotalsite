@@ -281,3 +281,106 @@ a {
   line-height: 1.7;
   color: var(--ink-soft);
 }
+
+/* ===== セクション：テキスト＋挿絵の2カラム ===== */
+.section-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 48px;
+  align-items: center;
+}
+
+.section-split .section-illust {
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+}
+
+.section-split .section-illust img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-split .section-illust .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  background: var(--mist);
+}
+
+@media (max-width: 880px) {
+  .section-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .section-split .section-illust {
+    order: -1;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ===== 運営会社概要（会社概要テーブル） ===== */
+.profile-table {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  max-width: 640px;
+  border-top: 1px solid var(--line);
+}
+
+.profile-table dt,
+.profile-table dd {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-table dt {
+  background: var(--mist);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+}
+
+.profile-table dd {
+  background: var(--paper);
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.7;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  .profile-table {
+    grid-template-columns: 108px 1fr;
+  }
+  .profile-table dt,
+  .profile-table dd {
+    padding: 14px 14px;
+    font-size: 13px;
+  }
+}
+
+/* 運営会社セクション：右側の余白に透過PNGの挿絵を背景として配置 */
+.profile-section-wrap {
+  background-image: url("../images/about-company-illust.png");
+  background-repeat: no-repeat;
+  background-position: right 0 top 20px;
+  background-size: 340px auto;
+}
+
+@media (max-width: 880px) {
+  .profile-section-wrap {
+    background-image: none;
+  }
+}
