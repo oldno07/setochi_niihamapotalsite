@@ -1,154 +1,189 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>企業一覧 | 新居浜企業応援ポータル</title>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/archive.css">
 </head>
 <body>
 <header id="site-header"></header>
+<main class="archive-page">
 
-<main class="archive-company">
-  <section class="page-hero container">
-    <nav class="breadcrumb">
-      <a href="index.html">ホーム</a> / <span>企業一覧</span>
-    </nav>
-    <h1>企業一覧</h1>
-    <p>新居浜市で活躍する企業をご紹介します。</p>
-  </section>
+<section class="archive-hero">
+<div class="container hero-inner">
+<nav class="breadcrumb"><a href="index.html">ホーム</a> / 企業一覧</nav>
+<span class="eyebrow">COMPANIES</span>
+<h1>新居浜の企業を探す</h1>
+<p>地域で活躍する企業やお店をご紹介します。</p>
+<div class="search-wrap">
+<input type="search" placeholder="企業名・業種・キーワード">
+<button>検索</button>
+</div>
+</div>
+</section>
 
-  <section class="archive-filter container">
-    <div class="search-box">
-      <input type="search" placeholder="企業名・キーワードで検索">
-      <button>検索</button>
-    </div>
+<section class="archive-content container">
+<div class="archive-head">
+<h2>業種から探す</h2>
+<div class="chips">
+<a class="active">すべて</a><a>製造</a><a>建設</a><a>飲食</a><a>小売</a><a>サービス</a>
+</div>
+<p>32社掲載中</p>
+</div>
 
-    <div class="category-filter">
-      <a href="#" class="active">すべて</a>
-      <a href="#">製造</a>
-      <a href="#">建設</a>
-      <a href="#">サービス</a>
-      <a href="#">小売</a>
-      <a href="#">医療</a>
-    </div>
+<div class="company-grid">
 
-    <p class="result-count">全32社掲載中</p>
-  </section>
-
-  <section class="company-grid container">
-
-    <article class="company-card">
-      <a href="companies/sample-retail/index.html">
-        <img src="https://placehold.co/600x400" alt="">
-        <div class="company-card-body">
-          <span class="company-category">サービス</span>
-          <h2>株式会社せとうち</h2>
-          <p>地域に寄り添ったものづくりとデザインを行っています。</p>
-          <div class="tags">
-            <span>#地域密着</span>
-            <span>#ものづくり</span>
-          </div>
-          <span class="more">詳しく見る →</span>
-        </div>
-      </a>
-    </article>
-
-    <article class="company-card">
-      <a href="companies/sample-retail/index.html">
-        <img src="https://placehold.co/600x400" alt="">
-        <div class="company-card-body">
-          <span class="company-category">製造</span>
-          <h2>○○工業</h2>
-          <p>高品質な製品づくりを続けています。</p>
-          <div class="tags">
-            <span>#地域密着</span>
-            <span>#ものづくり</span>
-          </div>
-          <span class="more">詳しく見る →</span>
-        </div>
-      </a>
-    </article>
-
-    <article class="company-card">
-      <a href="companies/sample-retail/index.html">
-        <img src="https://placehold.co/600x400" alt="">
-        <div class="company-card-body">
-          <span class="company-category">建設</span>
-          <h2>△△建設</h2>
-          <p>地域インフラを支える総合建設会社です。</p>
-          <div class="tags">
-            <span>#地域密着</span>
-            <span>#ものづくり</span>
-          </div>
-          <span class="more">詳しく見る →</span>
-        </div>
-      </a>
-    </article>
-
-    <article class="company-card">
-      <a href="companies/sample-retail/index.html">
-        <img src="https://placehold.co/600x400" alt="">
-        <div class="company-card-body">
-          <span class="company-category">小売</span>
-          <h2>□□商店</h2>
-          <p>暮らしを支える地域密着のお店です。</p>
-          <div class="tags">
-            <span>#地域密着</span>
-            <span>#ものづくり</span>
-          </div>
-          <span class="more">詳しく見る →</span>
-        </div>
-      </a>
-    </article>
-
-    <article class="company-card">
-      <a href="companies/sample-retail/index.html">
-        <img src="https://placehold.co/600x400" alt="">
-        <div class="company-card-body">
-          <span class="company-category">医療</span>
-          <h2>新居浜メディカル</h2>
-          <p>安心して通える医療サービスを提供。</p>
-          <div class="tags">
-            <span>#地域密着</span>
-            <span>#ものづくり</span>
-          </div>
-          <span class="more">詳しく見る →</span>
-        </div>
-      </a>
-    </article>
-
-    <article class="company-card">
-      <a href="companies/sample-retail/index.html">
-        <img src="https://placehold.co/600x400" alt="">
-        <div class="company-card-body">
-          <span class="company-category">IT</span>
-          <h2>えひめIT</h2>
-          <p>DX支援とWeb制作を行っています。</p>
-          <div class="tags">
-            <span>#地域密着</span>
-            <span>#ものづくり</span>
-          </div>
-          <span class="more">詳しく見る →</span>
-        </div>
-      </a>
-    </article>
-
-  </section>
-
-  <nav class="pagination container">
-    <a href="#">«</a>
-    <a class="current" href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">»</a>
-  </nav>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+1" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 1</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+2" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 2</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+3" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 3</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+4" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 4</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+5" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 5</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+6" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 6</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+7" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 7</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+8" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 8</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+9" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 9</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+10" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 10</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+11" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 11</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+<article class="company-card">
+<a href="#">
+<div class="thumb"><img src="https://placehold.co/800x600?text=Company+12" alt=""></div>
+<div class="card-body">
+<span class="badge">製造業</span>
+<h3>サンプル企業 12</h3>
+<p>地域に根ざしたものづくりと、人を大切にする企業です。</p>
+<div class="tags"><span>#地域密着</span><span>#ものづくり</span></div>
+<div class="link">詳しく見る →</div>
+</div>
+</a>
+</article>
+</div>
+<nav class="pagination"><a>1</a><a>2</a><a>3</a></nav>
+</section>
 </main>
-
 <footer id="site-footer"></footer>
-
 <script src="assets/header.js"></script>
 <script src="assets/footer.js"></script>
-</body>
-</html>
+</body></html>
