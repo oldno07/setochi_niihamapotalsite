@@ -28,28 +28,111 @@
           </p>
         </div>
 
-        <div class="ledger">
-          <div class="ledger-head">
-            <div>業種</div>
-            <div>会社名</div>
-            <div>ひとこと</div>
-            <div></div>
-          </div>
+        <div class="filter-chips" id="filterChips">
+          <button type="button" class="filter-chip active" data-filter="all">
+            すべて
+          </button>
+          <button type="button" class="filter-chip" data-filter="medical">
+            医療
+          </button>
+          <button type="button" class="filter-chip" data-filter="construction">
+            建設
+          </button>
+          <button type="button" class="filter-chip" data-filter="auto">
+            自動車
+          </button>
+          <button type="button" class="filter-chip" data-filter="food">
+            飲食
+          </button>
+          <button type="button" class="filter-chip" data-filter="retail">
+            小売
+          </button>
+          <button type="button" class="filter-chip" data-filter="general">
+            くらしのいろいろ
+          </button>
+        </div>
 
-          <a href="yakiniku-furaibo/index.html" class="ledger-row">
-            <div><span class="tag tag-food">飲食</span></div>
-            <div><h3>焼肉 風来坊</h3></div>
-            <div class="catch">新居浜で30年、炭火一筋。</div>
-            <div class="more">見る →</div>
+        <p class="archive-count" id="archiveCount">3社掲載中</p>
+
+        <div class="company-grid" id="companyGrid">
+          <a
+            href="yakiniku-furaibo/index.html"
+            class="company-card"
+            data-category="food"
+          >
+            <div class="company-thumb">
+              <img
+                src="../images/companies/yakiniku-furaibo/photo-1.jpg"
+                alt="焼肉 風来坊 店舗外観"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="placeholder" style="display: none">
+                photo-1.jpg 未設置
+              </div>
+            </div>
+            <div class="company-card-body">
+              <span class="tag tag-food">飲食</span>
+              <h3>焼肉 風来坊</h3>
+              <p class="catch">新居浜で30年、炭火一筋。</p>
+              <div class="more">見る →</div>
+            </div>
           </a>
 
-          <a href="setouchi-boys/index.html" class="ledger-row">
-            <div><span class="tag tag-general">スポーツ</span></div>
-            <div><h3>東予瀬戸内ボーイズ</h3></div>
-            <div class="catch">
-              野球を楽しみ、好きになる。文武両道で成長するチーム。
+          <a
+            href="retail-sample/index.html"
+            class="company-card"
+            data-category="retail"
+          >
+            <div class="company-thumb">
+              <img
+                src="../images/companies/retail-sample/photo-1.jpg"
+                alt="浜口商店 店内"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="placeholder" style="display: none">
+                photo-1.jpg 未設置
+              </div>
             </div>
-            <div class="more">見る →</div>
+            <div class="company-card-body">
+              <span class="tag tag-retail">小売</span>
+              <h3>浜口商店</h3>
+              <p class="catch">三代続く、田の上の日用品店。</p>
+              <div class="more">見る →</div>
+            </div>
+          </a>
+
+          <a
+            href="setouchi-boys/index.html"
+            class="company-card"
+            data-category="general"
+          >
+            <div class="company-thumb">
+              <img
+                src="../images/companies/setouchi-boys/photo-1.jpg"
+                alt="東予瀬戸内ボーイズ 活動風景"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="placeholder" style="display: none">
+                photo-1.jpg 未設置
+              </div>
+            </div>
+            <div class="company-card-body">
+              <span class="tag tag-general">スポーツ</span>
+              <h3>東予瀬戸内ボーイズ</h3>
+              <p class="catch">
+                野球を楽しみ、好きになる。文武両道で成長するチーム。
+              </p>
+              <div class="more">見る →</div>
+            </div>
           </a>
         </div>
       </div>
@@ -64,5 +147,56 @@
       window.SITE_BASE = "../";
     </script>
     <script src="../assets/footer.js"></script>
+
+    <script>
+      (function () {
+        var chips = document.querySelectorAll("#filterChips .filter-chip");
+        var cards = document.querySelectorAll("#companyGrid .company-card");
+        var countEl = document.getElementById("archiveCount");
+
+        function applyFilter(filter) {
+          var visibleCount = 0;
+          cards.forEach(function (card) {
+            var match =
+              filter === "all" || card.getAttribute("data-category") === filter;
+            card.classList.toggle("is-hidden", !match);
+            if (match) visibleCount++;
+          });
+          countEl.textContent = visibleCount + "社掲載中";
+        }
+
+        function setActiveChip(filter) {
+          var found = false;
+          chips.forEach(function (c) {
+            var isMatch = c.getAttribute("data-filter") === filter;
+            c.classList.toggle("active", isMatch);
+            if (isMatch) found = true;
+          });
+          return found;
+        }
+
+        chips.forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            var filter = chip.getAttribute("data-filter");
+            setActiveChip(filter);
+            applyFilter(filter);
+            history.replaceState(
+              null,
+              "",
+              filter === "all" ? location.pathname : "#" + filter,
+            );
+          });
+        });
+
+        // トップページの「業種で探す」（例：companies/index.html#medical）から
+        // 来た場合、該当する業種のチップを自動選択する
+        var initialFilter = location.hash.replace("#", "");
+        if (initialFilter && setActiveChip(initialFilter)) {
+          applyFilter(initialFilter);
+        } else {
+          applyFilter("all");
+        }
+      })();
+    </script>
   </body>
 </html>

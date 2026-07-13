@@ -20,13 +20,10 @@
     '<nav class="nav-links">' +
     '<a href="' +
     base +
-    'companies/index.html">企業一覧</a>' +
+    'companies/index.html">一覧から探す</a>' +
     '<a href="' +
     base +
-    'archive.html">掲載企業一覧</a>' +
-    '<a href="' +
-    base +
-    'categories.html">業種で探す</a>' +
+    'index.html#categories">業種で探す</a>' +
     '<a href="' +
     base +
     'index.html#news">新着情報</a>' +
