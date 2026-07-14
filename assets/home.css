@@ -359,6 +359,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* 2枚だけ並べたい場合のバリアント */
+.index-grid.is-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .index-card {
   background: var(--paper);
   padding: 32px 18px;
@@ -448,6 +453,42 @@
 .ledger-row .tag.tag-general {
   background: #efefed;
   color: #5c5c58;
+}
+
+/* ===== .tag：ledger専用スコープを外し、カード等でも使い回せる汎用版 ===== */
+.tag {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 4px;
+  width: fit-content;
+  background: var(--mist);
+  color: var(--ink-soft);
+}
+.tag.tag-food {
+  background: #f3e9e5;
+  color: #8a4a36;
+}
+.tag.tag-medical {
+  background: #e8f1ed;
+  color: #2e5c3a;
+}
+.tag.tag-construction {
+  background: #e6eef3;
+  color: #2c5c76;
+}
+.tag.tag-auto {
+  background: #f2ede2;
+  color: #8a6a2e;
+}
+.tag.tag-general {
+  background: #efefed;
+  color: #5c5c58;
+}
+.tag.tag-retail {
+  background: #f2e8ee;
+  color: #6b4a63;
 }
 
 .ledger-row h3 {
@@ -556,5 +597,134 @@
 @media (max-width: 520px) {
   .index-grid.is-3col {
     grid-template-columns: 1fr;
+  }
+  .index-grid.is-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== 企業一覧：業種フィルターチップ ===== */
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.filter-chip {
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--sea-deep);
+  color: var(--sea-deep);
+}
+
+.filter-chip.active {
+  background: var(--sea-deep);
+  color: #ffffff;
+  border-color: var(--sea-deep);
+}
+
+.archive-count {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+/* ===== 企業一覧：カードグリッド ===== */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.company-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(20, 20, 18, 0.12);
+}
+
+.company-thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--mist);
+  overflow: hidden;
+  position: relative;
+}
+
+.company-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-thumb .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 8px;
+}
+
+.company-card-body {
+  padding: 18px 20px 22px;
+}
+
+.company-card-body .tag {
+  margin-bottom: 10px;
+}
+
+.company-card-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.company-card-body .catch {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.company-card-body .more {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sea-deep);
+}
+
+.company-card.is-hidden {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .company-card-body {
+    padding: 12px 14px 16px;
   }
 }

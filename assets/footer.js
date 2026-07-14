@@ -19,10 +19,15 @@
     '<div class="footer-cols">' +
     '<div class="footer-col">' +
     "<h4>サイト内のページ</h4>" +
-    '<a href="' + base + 'companies/index.html">企業一覧</a>' +
-    '<a href="' + base + 'categories.html">業種で探す</a>' +
-    '<a href="' + base + 'index.html#news">新着情報</a>' +
-    '<a href="' + base + 'about.html">このサイトについて</a>' +
+    '<a href="' +
+    base +
+    'companies/index.html">業種で探す</a>' +
+    '<a href="' +
+    base +
+    'index.html#news">新着情報</a>' +
+    '<a href="' +
+    base +
+    'about.html">このサイトについて</a>' +
     "</div>" +
     "</div>" +
     "</div>" +
