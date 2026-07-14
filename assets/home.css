@@ -721,7 +721,7 @@
 
 @media (max-width: 520px) {
   .company-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
   .company-card-body {
