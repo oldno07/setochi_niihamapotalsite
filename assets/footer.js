@@ -21,7 +21,10 @@
     "<h4>サイト内のページ</h4>" +
     '<a href="' +
     base +
-    'companies/index.html">業種で探す</a>' +
+    'index.html#categories">業種で探す</a>' +
+    '<a href="' +
+    base +
+    'companies/index.html">一覧から探す</a>' +
     '<a href="' +
     base +
     'index.html#news">新着情報</a>' +

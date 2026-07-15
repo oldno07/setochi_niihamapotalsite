@@ -603,6 +603,65 @@
   }
 }
 
+/* ===== 企業一覧：キーワード検索 ===== */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 480px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  transition: border-color 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--sea-deep);
+}
+
+.search-box svg {
+  flex-shrink: 0;
+  color: var(--ink-soft);
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.search-box input::placeholder {
+  color: var(--ink-soft);
+}
+
+.search-box .clear-btn {
+  flex-shrink: 0;
+  display: none;
+  border: none;
+  background: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 2px;
+  line-height: 0;
+}
+
+.search-box.has-value .clear-btn {
+  display: flex;
+}
+
+@media (max-width: 760px) {
+  .search-box {
+    max-width: 100%;
+  }
+}
+
 /* ===== 企業一覧：業種フィルターチップ ===== */
 .filter-chips {
   display: flex;
