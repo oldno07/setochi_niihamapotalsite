@@ -605,7 +605,7 @@
 
 /* ===== 連絡先・CTA ===== */
 .company-contact {
-  background: var(--ink);
+  background: linear-gradient(135deg, var(--sea-deep) 0%, var(--sea) 100%);
   border-radius: 16px;
   padding: 36px;
   display: flex;
